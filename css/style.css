@@ -529,74 +529,49 @@ textarea{
   font-weight: bold;
 }
 /* Footer */
+.footer{
+  margin: 0 auto;
+  width: 85%;
+  max-width: 1200px;
+}
 .site-footer
 {
   background-color: var(--bgcolor);
   padding:45px 0 20px;
-  font-size:15px;
   line-height:24px;
 }
-.site-footer hr
-{
-  border-top-color:#bbb;
-  opacity:0.5
+.about{
+  width: 40%;
 }
-.site-footer hr.small
-{
-  margin:20px 0
-}
-.site-footer h6
-{
+.site-footer h6{
   color:#fff;
   font-size:16px;
   text-transform:uppercase;
   margin-top:5px;
   letter-spacing:2px
 }
-.site-footer a
-{
-  color:#737373;
+.footer-links li{
+  display:block;
 }
-.site-footer a:hover
-{
-  color:#3366cc;
-  text-decoration:none;
+.footer-links a{
+  color: #000;
 }
-.footer-links
-{
-  padding-left:0;
-  list-style:none
-}
-.footer-links li
-{
-  display:block
-}
-.footer-links a
-{
-  color:#737373
+.footer-links i{
+  margin-right: 5%;
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color:#3366cc;
-  text-decoration:none;
+  color: var(--blue);
 }
-.footer-links.inline li
-{
-  display:inline-block
-}
-.site-footer .social-icons
-{
-  text-align:right
-}
-.site-footer .social-icons a
-{
+.site-footer .social-icons a{
   width:40px;
   height:40px;
   line-height:40px;
   margin-left:6px;
+  color: var(--black);
   margin-right:0;
   border-radius:100%;
-  background-color:#33353d
+  background-color: var(--white);
 }
 .copyright-text
 {
@@ -666,15 +641,15 @@ textarea{
   width:34px;
   font-size:14px
 }
-.social-icons a.facebook:hover
+.social-icons a.github:hover
 {
-  background-color:#3b5998
+  background-color:#000;
 }
-.social-icons a.twitter:hover
+.social-icons a.codepen:hover
 {
-  background-color:#00aced
+  background-color:#464646;
 }
-.social-icons a.linkedin:hover
+.social-icons a.email:hover
 {
   background-color:#007bb6
 }
@@ -690,7 +665,4 @@ textarea{
     margin-right:0;
     font-weight:600
   }
-}
-.row{
-  padding-top: 5%;
 }
