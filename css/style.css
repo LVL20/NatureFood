@@ -190,23 +190,28 @@ img{
     box-shadow: var(--shadow);
   }
 }
-
-/* Menu */
-@media screen and (max-width: 900px), (max-height: 500px) {
-  #menu{
-    flex-wrap: wrap;
-  }
-}
 .wrapper {
   min-height: 30%;
+  margin-bottom: 5%;
   display: flex;
   padding: 50px 15px;
 }
-@media screen and (max-width: 900px), (max-height: 500px) {
-  .wrapper {
+
+@media screen and (max-width:800px){
+ nav{
+  justify-content: center;
+}
+  #menu, .container{
     flex-wrap: wrap;
-    flex-direction: column;
   }
+}
+
+
+/* Menu */
+@media screen and (max-width: 900px), (max-height: 500px) {
+
+
+
 }
 .card-form {
   max-width: 570px;
@@ -216,6 +221,14 @@ img{
 @media screen and (max-width: 576px) {
   .card-form {
     margin: 0 auto;
+  }
+  .wrapper {
+    min-height: 30%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 15px;
   }
 }
 .card-form__inner {
@@ -235,13 +248,13 @@ img{
 @media screen and (max-width: 900px) {
   .card-form__inner {
     padding: 25px;
-    padding-top: 30%;
+    padding-top: 40%;
   }
 }
 @media screen and (max-width: 480px) {
   .card-form__inner {
     padding: 25px;
-    padding-top: 10%;
+    padding-top: 40%;
   }
 }
 @media screen and (max-width: 360px) {
@@ -265,7 +278,7 @@ button, button:focus {
   box-shadow: var(--shadow);
   color: var(--white);
   cursor: pointer;
-   transition: all 0.3s;
+  transition: all 0.3s;
 }
 button:hover {
   box-shadow: 0px 7px 30px rgba(223, 45, 70, 0.75);
@@ -273,8 +286,8 @@ button:hover {
   border: 1px solid var(--blue);
 }
 button:active {
-	 transform: scale(0.9);
-	 box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  transform: scale(0.9);
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
 }
 
 @media screen and (max-width: 480px) {
@@ -365,104 +378,103 @@ button:active {
   color: var(--white);
 }
 .card-services__front {
-	 position: relative;
-	 display: flex;
-	 align-items: center;
-	 overflow: hidden;
-	 padding: 1rem;
-   margin-right: 15px;
-   border-radius: 8px;
-	 max-width: 570px;
-  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 1rem;
+  margin-right: 15px;
+  border-radius: 8px;
+  max-width: 570px;
   width: 100%;
-	 text-align: center;
-	 color: whitesmoke;
-	 background-color: whitesmoke;
-	 box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: var(--shadow);
 }
- @media (min-width: 600px) {
-	 .card-services__front {
-		 height: 350px;
-     margin-right: 15px;
-	}
+@media screen and (min-width: 300px) and (max-width:900px) {
+  .card-services__front {
+    height: 350px;
+    margin: 15px auto;
+  }
 }
- .card-services__front:before {
-	 content: '';
-	 position: absolute;
-	 top: 0;
-	 left: 0;
-	 width: 100%;
-	 height: 110%;
-	 background-size: cover;
-	 background-position: center center;
-	 transition: transform calc(var(--d) * 1.5) var(--e);
-	 pointer-events: none;
+.card-services__front:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: center center;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
 }
- .card-services__front:nth-child(1):before {
-	 background-image: url(https://image.freepik.com/foto-gratis/smartphone-3d-cajas-carton-concepto-envio-entrega_58466-370.jpg);
+.card-services__front:nth-child(1):before {
+  background-image: url(https://elements-cover-images-0.imgix.net/440ccbf6-a930-48c7-8b1b-955e5e10f8a3?auto=compress%2Cformat&fit=max&w=1019&s=177ef9bbc022c96d9bd2b22889f142b3);
 }
- .card-services__front:nth-child(2):before {
-	 background-image: url(https://image.freepik.com/foto-gratis/concepto-pedido-tienda-compras-linea_53876-120068.jpg);
+.card-services__front:nth-child(2):before {
+  background-image: url(https://elements-cover-images-0.imgix.net/0effb69c-0284-4164-8700-2aef909a5e93?auto=compress%2Cformat&fit=max&w=1019&s=a7123e9c68245ae8c8e538b6e5fb5b26);
 }
- .card-services__front:nth-child(3):before {
-	 background-image: url(https://image.freepik.com/foto-gratis/ilustracion-3d-cajas-regalo-volando-cielo-paracaidas-concepto-servicio-compras-entrega-linea_58466-14620.jpg);
+.card-services__front:nth-child(3):before {
+  background-image: url(https://elements-cover-images-0.imgix.net/0e400279-3e0c-448c-a01b-5a563a3668d5?auto=compress%2Cformat&fit=max&w=1019&s=5a232bf25a44fd1288e365230869e424);
 }
 
 
 .content {
-	 position: relative;
-	 display: flex;
-	 flex-direction: column;
-	 align-items: center;
-	 width: 100%;
-   flex-wrap:wrap;
-	 padding: 4rem;
-	 transition: transform var(--d) var(--e);
-	 z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex-wrap:wrap;
+  padding: 4rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
 }
- .content > * + * {
-	 margin-top: 1rem;
+.content > * + * {
+  margin-top: 1rem;
 }
- .copy {
-	 font-size: 25px;
-	 font-weight: bold;
-   border-radius: 8px;
-   color: var(--black);
-	 line-height: 1.2;
+.copy {
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 8px;
+  color: var(--black);
+  line-height: 1.2;
 }
 
- @media (hover: hover) and (min-width: 600px) {
-	 .card-form:after {
-		 transform: translateY(0);
-	}
-	 .content {
-		 transform: translateY(calc(100% - 4.5rem));
-	}
-	 .content > *:not(.title) {
-		 opacity: 0;
-		 transform: translateY(1rem);
-		 transition: transform var(--d) var(--e), opacity var(--d) var(--e);
-	}
-	 .card-form:hover, .card-form:focus-within {
-		 align-items: center;
-	}
-	 .card-services__front:hover:before, .card-form:focus-within:before {
-		 transform: translateY(-4%);
-	}
-	 .card-services__front:hover:after, .card-form:focus-within:after {
-		 transform: translateY(-5%);
-	}
-	 .card-services__front:hover .content, .card-form:focus-within .content {
-		 transform: translateY(0);
-	}
-	 .card-services__front:hover .content > *:not(.title), .card:focus-within .content > *:not(.title) {
-		 opacity: 1;
-		 transform: translateY(0);
-		 transition-delay: calc(var(--d) / 8);
-	}
-	 .card-services__front:focus-within:before, .card-form:focus-within:after, .card-form:focus-within .content, .card-form:focus-within .content > *:not(.title) {
-		 transition-duration: 0s;
-	}
+@media (hover: hover) and (min-width: 600px) {
+  .card-form:after {
+    transform: translateY(0);
+  }
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+  .card-form:hover, .card-form:focus-within {
+    align-items: center;
+  }
+  .card-services__front:hover:before, .card-form:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .card-services__front:hover:after, .card-form:focus-within:after {
+    transform: translateY(-5%);
+  }
+  .card-services__front:hover .content, .card-form:focus-within .content {
+    transform: translateY(0);
+  }
+  .card-services__front:hover .content > *:not(.title), .card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+  .card-services__front:focus-within:before, .card-form:focus-within:after, .card-form:focus-within .content, .card-form:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
 }
 
 
@@ -479,7 +491,7 @@ button:active {
   margin-bottom: 15px;
 }
 .input-field input[type=text]:focus {
-     box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
 }
 
 input:not([type]):focus:not([readonly]),
