@@ -1,24 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai&family=Lobster&family=Lobster+Two&family=Oleo+Script&family=Oswald&family=Unica+One&display=swap');
-
 $pfont: 'Arima Madurai', 'Roboto', sans-serif;
 $sfont: 'Lobster Two', 'Roboto', sans-serif;
 $brandfont: 'Unica One', cursive;
+$cursive: 'Oleo Script', cursive;
 $bgcolor: #E9A620;
 $black: #181818;
 $white: #f5f5f5;
 $red: #e92030;
+$shadowbtn: 0 30px 60px 0 rgba(90, 116, 148, 0.2);
 
-body{
+body {
   margin: 0;
   font-family: $pfont;
+  background: $white;
 }
 
-header{
+header {
   background: $bgcolor;
-  // padding: 48px;
+  padding: 48px;
 }
 
-nav{
+nav {
   background-color: rgba(0,0,0,0);
   box-shadow: 0 0 0 0;
   display: flex;
@@ -29,24 +31,27 @@ nav{
   top: 20px;
   left: 0;
   right: 0;
-  & a, ul a{
+
+  & a,
+  ul a {
     animation: MoveLeft 1s ease-in;
-    display: inline-block;
-    transition: color .5s ease-out;
+    display: inline-flex;
+    transition: color 0.5s ease-out;
     color: $black;
   }
-  & ul a:hover{
+
+  & ul a:hover {
     background: none;
     color: $red;
   }
 }
 
-.container{
+.container {
   width: 95%;
   max-width: 1200px;
 }
 
-.logo{
+.logo {
   color: $red;
   display: inline-flex;
   align-items: baseline;
@@ -58,11 +63,171 @@ nav{
   height: 100%;
 }
 
-.active{
+.active {
   color: $red;
 }
 
-.hero__grid{
+.hero {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(400px, 570px));
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__item {
+    animation: MoveLeft 1.2s ease-out;
+  }
+}
+
+.text {
+  &__subtitle {
+    font-size: 2rem;
+    font-family: $cursive;
+    animation-fill-mode: both;
+    animation: MoveRight 1s ease-out;
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-family: $sfont;
+  }
+
+  &__card{
+    font-size: 1.7rem;
+    font-weight: 900;
+  }
+
+  &__red {
+    background: rgb(233,33,32);
+    background: -moz-linear-gradient(90deg, rgba(233,33,32,1) 0%, rgba(233,66,32,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(233,33,32,1) 0%, rgba(233,66,32,1) 100%);
+    background: linear-gradient(90deg, rgba(233,33,32,1) 0%, rgba(233,66,32,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=  "#e92120",endColorstr="#e94220",GradientType=1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__price{
+    font-size: 1.5rem;
+    font-weight: bold;
+    &-original{
+      font-size: 14px;
+      font-style: italic;
+      opacity: .5;
+      text-decoration: line-through;
+    }
+  }
+}
+
+.button {
+  border-radius: 8px;
+  height: 55px;
+  font-family: $pfont;
+  text-transform: none;
+  font-size: 1.5rem;
+  padding: 16px 32px;
+
+&__primary{
+  background: $red;
+  font-size: 22px;
+  font-weight: 500;
+  box-shadow: $shadowbtn;
+  color: $white;
+  transition: all 0.3s;
+}
+
+&-card{
+  width: 100%;
+}
+
+  &__secondary {
+    color: $black;
+    box-shadow: $shadowbtn;
+    border: 1px solid $red;
+  }
+}
+
+.wave {
+  height: 100px;
+  background: $bgcolor;
+
+  &__reverse {
+    background: $white;
+  }
+}
+
+#menu {
+  text-align: center;
+}
+
+.menu {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(3,minmax(300px, 570px));
+  place-items: center;
+  gap: 32px;
+  padding-bottom: 32px;
+
+  &__card {
+    $border: 16px;
+    $ajust: 100px;
+    box-shadow: $shadowbtn;
+    border-radius: $border;
+    padding: 32px;
+    position: relative;
+    margin-top: $ajust;
+    &-item {
+      max-width: 95%;
+      height: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute;
+      width: 80%;
+      transform: translateY(-$ajust);
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(6, 2, 29, 0.15);
+        border-radius: $border;
+      }
+    }
+
+    &-img {
+      border-radius: $border;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    &-inner{
+      padding-top: $ajust;
+    }
+  }
+}
+
+.rating{
+    color: $bgcolor;
+}
+
+.delivery{
+  background: $bgcolor;
+}
+
+.contact{
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 570px));
+    place-items: center;
+  }
+  &__button{
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

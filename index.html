@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content=="IE=edge"/>
+  <meta http-equiv="X-UA-Compatible" content=="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"/>
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
   <link rel="stylesheet" href="css/universal.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -19,6 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&family=Lobster&family=Lobster+Two&family=Oleo+Script&family=Oswald&family=Unica+One&display=swap" rel="stylesheet">
   <title>Nature Food</title>
 </head>
+
 <body>
   <header class="header" id="home">
     <nav>
@@ -31,77 +33,61 @@
       </ul>
     </nav>
     <div class="container">
-        <div class="left">
-          <h1>Let's be veggie</h1>
-          <h2>We ready to supply healthy food for you <span class="span">anytime</span></h2>
-          <a class="buttonsecondary" href="#menu">Discover menu</a>
+      <div class="hero__grid">
+        <div class="hero__item">
+          <p class="text text__subtitle">Let's be veggie</p>
+          <h1 class="text text__title">We ready to supply healthy food for you <span class="text__red">anytime</span></h1>
+          <a class="button button__secondary" href="#menu">Discover menu</a>
         </div>
-        <img class="right" src="img/veganpng.png" alt="">
+        <img src="img/veganpng.png" alt="">
+      </div>
     </div>
   </header>
   <div class="wave">
-    <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+    <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f5f5f5;"></path>
+      </svg></div>
   </div>
 
-  <section>
-    <div class="container" id="menu">
-      <h2>Menu</h2>
-    </div>
-    <div class="container">
-      <nav>
-        <ul>
-          <li><a href="#!">Breakfasts</a></li>
-          <li><a class="active" href="#menu">Salads</a></li>
-          <li><a href="#!">Drinks</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="container">
-      <div class="wrapper">
-        <div class="card-form">
-          <div class="card-list">
-            <div class="card-item -front">
-              <div class="card-item__side">
-                <div class="card-item__cover">
-                  <img src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Christmas Pomegranate Salad" class="card-item__bg">
-                </div>
-              </div>
-            </div>
+  <section class="container">
+    <h2 class="center" id="menu">Menu</h2>
+    <nav>
+      <ul>
+        <li><a href="#!">Breakfasts</a></li>
+        <li><a class="active" href="#menu">Salads</a></li>
+        <li><a href="#!">Drinks</a></li>
+      </ul>
+    </nav>
+    <div class="menu">
+      <div class="menu__card">
+        <div class="menu__card-item">
+          <img src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Christmas Pomegranate Salad" class="menu__card-img">
+        </div>
+        <div class="menu__card-inner">
+          <h3 class="text text__card">Christmas Pomegranate Salad</h3>
+          <div class="rating">
+            <span class="sr-only">Rating: 3 out of 5 stars</span>
+            <span class="fas fa-star" aria-hidden="true"></span>
+            <span class="fas fa-star" aria-hidden="true"></span>
+            <span class="fas fa-star" aria-hidden="true"></span>
+            <span class="far fa-star" aria-hidden="true"></span>
+            <span class="far fa-star" aria-hidden="true"></span>
           </div>
-          <div class="card-form__inner">
-            <div class="card-title">Christmas Pomegranate Salad</div>
-            <div class="rating">
-              <span class="sr-only">Rating: 3 out of 5 stars</span>
-              <span class="fas fa-star" aria-hidden="true"></span>
-              <span class="fas fa-star" aria-hidden="true"></span>
-              <span class="fas fa-star" aria-hidden="true"></span>
-              <span class="far fa-star" aria-hidden="true"></span>
-              <span class="far fa-star" aria-hidden="true"></span>
-            </div>
-            <div class="card-description">
-              <p>If you love mixing cheese and fruit in salads, this salad is not only tasty, it is also packed with great nutrients and antioxidants from pomegranate seeds.</p>
-            </div>
-            <div class="price">
-              <p> <span class="new-price">$14.49</span> <span class="original-price"><span class="sr-only">Originally:</span>$20.00</span>
-              </p>
-            </div>
-            <button class="card-form__button">Buy</button>
-          </div>
+            <p>If you love mixing cheese and fruit in salads, this salad is not only tasty, it is also packed with great nutrients and antioxidants from pomegranate seeds.</p>
+            <p class="text text__price">
+               $14.49
+                <span class="text text__price-original">
+                  <span class="sr-only">Originally:</span>$20.00</span>
+            </p>
+          <a class="button button__primary button-card">Buy</a>
         </div>
       </div>
-      <div class="wrapper">
-        <div class="card-form">
-          <div class="card-list">
-            <div class="card-item -front">
-              <div class="card-item__side">
-                <div class="card-item__cover">
-                  <img src="https://www.foodiecrush.com/wp-content/uploads/2018/04/Grapefruit-Avocado-Fennel-Salad-foodiecrush.com-007.jpg" alt="Drunken Grapefruit Salad" class="card-item__bg">
-                </div>
+      <div class="menu__card">
+        <div class="menu__card-item">
+                <img src="https://www.foodiecrush.com/wp-content/uploads/2018/04/Grapefruit-Avocado-Fennel-Salad-foodiecrush.com-007.jpg" alt="Drunken Grapefruit Salad" class="menu__card-img">
               </div>
-            </div>
-          </div>
-          <div class="card-form__inner">
-            <div class="card-title">Drunken Grapefruit Salad</div>
+          <div class="menu__card-inner">
+            <h3 class="text text__card">Drunken Grapefruit Salad</h3>
             <div class="rating">
               <span class="sr-only">Rating: 3 out of 5 stars</span>
               <span class="fas fa-star" aria-hidden="true"></span>
@@ -110,35 +96,21 @@
               <span class="far fa-star" aria-hidden="true"></span>
               <span class="far fa-star" aria-hidden="true"></span>
             </div>
-            <div class="card-description">
               <p>The Sicilian-inspired salad’s flavor combination of fennel’s sweet licorice flavor, juicy tart grapefruit and smooth avocado topped with salty Parmesan is a welcome addition to any meal any time of the year.</p>
-            </div>
-            <div class="price">
-              <p> <span class="new-price">$18.99</span> <span class="original-price"><span class="sr-only">Originally:</span>$25.00</span>
+              <p class="text text__price">
+                 $18.99
+                  <span class="text text__price-original">
+                    <span class="sr-only">Originally:</span>$25.00</span>
               </p>
-            </div>
-            <button class="card-form__button">Buy</button>
-
+            <a class="button button__primary button-card">Buy</a>
           </div>
         </div>
-      </div>
-      <div class="wrapper">
-        <div class="card-form">
-          <div class="card-list">
-            <div class="card-item -front">
-              <div class="card-list">
-                <div class="card-item -front">
-                  <div class="card-item__side">
-                    <div class="card-item__cover">
-                      <img src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Christmas Pomegranate Salad" class="card-item__bg">
-                    </div>
-                  </div>
-                </div>
+      <div class="menu__card">
+        <div class="menu__card-item">
+                <img src="https://thecozyapron.com/wp-content/uploads/2012/02/roasted-beet-salad_thecozyapron_1.jpg" alt="Roasted Beet Salad" class="menu__card-img">
               </div>
-            </div>
-          </div>
-          <div class="card-form__inner">
-            <div class="card-title">Roasted Beet Salad</div>
+          <div class="menu__card-inner">
+            <h3 class="text text__card">Roasted Beet Salad</h3>
             <div class="rating">
               <span class="sr-only">Rating: 4 out of 5 stars</span>
               <span class="fas fa-star" aria-hidden="true"></span>
@@ -147,31 +119,26 @@
               <span class="fas fa-star" aria-hidden="true"></span>
               <span class="far fa-star" aria-hidden="true"></span>
             </div>
-            <div class="card-description">
               <p>​This roasted beet salad topped with dollops of ricotta cheese sweetened with honey and orange is a fast to make salad that is delicious served chilled, or at room temperature.</p>
-            </div>
-            <div class="price">
-              <p> <span class="new-price">$29.49</span>
+              <p class="text text__price">
+                 $29.49
               </p>
-            </div>
-            <button class="card-form__button">Buy</button>
-
+            <a class="button button__primary button-card">Buy</a>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
 
   <div class="wave wave__reverse">
-    <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #E9A620;"></path></svg></div>
+    <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #E9A620;"></path>
+      </svg></div>
   </div>
-  <section id="services">
-    <div class="container" style="width:40%; text-align:center;">
-      <h2>Your favorite healthy food at home</h2>
-    </div>
-    <div class="container" style="flex-wrap:wrap;">
-      <div class="wrapper">
+  <section class="delivery" id="services">
+      <h2 class="center">Your favorite healthy <br> food at home</h2>
+    <div class="container">
+      <div class="menu">
         <div class="card-services__front card-item__cover">
           <div class="content ">
             <p class="copy">Fast delivery</p>
@@ -193,13 +160,14 @@
     </div>
   </section>
   <div class="wave">
-    <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+    <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f5f5f5;"></path>
+      </svg></div>
   </div>
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-    </div>
-    <div class="container" style="flex-wrap:wrap;">
+  <section class="container" id="contact">
+      <h2 class="center">Contact Us</h2>
+    <div class="contact__grid">
+      <img src="img/mail.png" class="card-item__bg" alt="Send email">
       <form class="form" action="index.html" method="post">
         <div class="title">
           <p>Fill in the fields below and we'll get back to you</p>
@@ -216,59 +184,59 @@
           <label for="message">Message</label>
           <textarea class="form__imput" id="message" name="name" rows="8" cols="80" placeholder="Write your message from Nature Food..."></textarea>
         </div>
-        <div style="width:60%; margin:auto;">
-          <button type="submit" name="action">Send</button>
+        <div class="contact__button">
+          <button class="button button__primary button-card" type="submit" name="action">Send</button>
         </div>
       </form>
-      <div class="form__img">
-        <img src="img/mail.png" class="card-item__bg" alt="Send email">
-      </div>
     </div>
   </section>
   <div class="wave wave__reverse">
-    <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #E9A620;"></path></svg></div>
+    <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #E9A620;"></path>
+      </svg></div>
   </div>
   <footer class="site-footer">
-      <div class="footer">
-        <div class="container" style="justify-content: space-between;">
-          <div class="about">
-            <h6>About Me</h6>
-            <p>Website created by <b><span class="span">Alex Ruiz.</span></b> <br> I'm designer and front end web developer from Buenos Aires, Argentina. I build websites in different programming languages ​​that include HTML, CSS, Javascript, Jquery, Bootstrap and Materialize.</p>
-          </div>
-
-          <div>
-            <h6>My Social Networks</h6>
-            <ul class="footer-links">
-              <li><a href="https://github.com/alexruix"><i class="fa-brands fa-github"></i>Github</a></li>
-              <li><a href="https://dribbble.com/alexruix"><i class="fa-brands fa-dribbble"></i>Dribble</a></li>
-              <li><a href="https://codepen.io/Tormenta"><i class="fa-brands fa-codepen"></i>Codepen</a></li>
-              <li><a href="https://www.instagram.com/ui.tormenta/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-              <li><a href="mailto: alexruiz1666@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a></li>
-            </ul>
-          </div>
+    <div class="footer">
+      <div class="container" style="justify-content: space-between;">
+        <div class="about">
+          <h6>About Me</h6>
+          <p>Website created by <b><span class="span">Alex Ruiz.</span></b> <br> I'm designer and front end web developer from Buenos Aires, Argentina. I build websites in different programming languages ​​that include HTML, CSS, Javascript, Jquery,
+            Bootstrap and Materialize.</p>
         </div>
-        <hr>
-      </div>
-      <div class="footer">
-        <div class="container" style="justify-content: space-between;">
-          <div>
-            <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
-         <b>Alex Ruiz.</b></a>
-            </p>
-          </div>
 
-          <div>
-            <ul class="social-icons">
-              <li><a class="github" href="https://github.com/alexruix"><i class="fa fa-github"></i></a></li>
-              <li><a class="dribbble" href="https://dribbble.com/alexruix"><i class="fa fa-dribbble"></i></a></li>
-              <li><a class="codepen" href="https://codepen.io/Tormenta"><i class="fa fa-codepen"></i></a></li>
-              <li><a class="dribbble" href="https://www.instagram.com/ui.tormenta/"><i class="fa fa-instagram"></i></a></li>
-              <li><a class="email" href="mailto: alexruiz1666@gmail.com"><i class="fa fa-envelope"></i></a></li>
-            </ul>
-          </div>
+        <div>
+          <h6>My Social Networks</h6>
+          <ul class="footer-links">
+            <li><a href="https://github.com/alexruix"><i class="fa-brands fa-github"></i>Github</a></li>
+            <li><a href="https://dribbble.com/alexruix"><i class="fa-brands fa-dribbble"></i>Dribble</a></li>
+            <li><a href="https://codepen.io/Tormenta"><i class="fa-brands fa-codepen"></i>Codepen</a></li>
+            <li><a href="https://www.instagram.com/ui.tormenta/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+            <li><a href="mailto: alexruiz1666@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a></li>
+          </ul>
         </div>
       </div>
-</footer>
+      <hr>
+    </div>
+    <div class="footer">
+      <div class="container" style="justify-content: space-between;">
+        <div>
+          <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+            <b>Alex Ruiz.</b></a>
+          </p>
+        </div>
+
+        <div>
+          <ul class="social-icons">
+            <li><a class="github" href="https://github.com/alexruix"><i class="fa fa-github"></i></a></li>
+            <li><a class="dribbble" href="https://dribbble.com/alexruix"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="codepen" href="https://codepen.io/Tormenta"><i class="fa fa-codepen"></i></a></li>
+            <li><a class="dribbble" href="https://www.instagram.com/ui.tormenta/"><i class="fa fa-instagram"></i></a></li>
+            <li><a class="email" href="mailto: alexruiz1666@gmail.com"><i class="fa fa-envelope"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
 
@@ -282,7 +250,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
 
 </body>
+
 </html>
