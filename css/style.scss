@@ -84,9 +84,11 @@ nav {
 .text {
   &__subtitle {
     font-size: 2rem;
-    font-family: $cursive;
     animation-fill-mode: both;
     animation: MoveRight 1s ease-out;
+    &-hero{
+      font-family: $cursive;
+    }
   }
 
   &__title {
@@ -95,7 +97,7 @@ nav {
   }
 
   &__card{
-    font-size: 1.7rem;
+    font-size: 1.65rem;
     font-weight: 900;
   }
 
@@ -156,10 +158,6 @@ nav {
   &__reverse {
     background: $white;
   }
-}
-
-#menu {
-  text-align: center;
 }
 
 .menu {
@@ -230,4 +228,63 @@ nav {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.menu__card-services{
+  position: relative;
+}
+
+.overlay{
+  position: absolute;
+  display: grid;
+  border-radius: 16px;
+  overflow: hidden;
+  place-items: center;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: rgba(6, 2, 29, 0.15);
+  z-index: 2;
+  text-align: center;
+  & p{
+    // opacity: 0;
+
+  }
+  &:hover p{
+    animation: welcometext .3s ease-in;
+  }
+}
+
+label{
+  color: $black !important;
+  font-size: 14px;
+}
+
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=email]:not(.browser-default),
+textarea{
+  border: 1px solid rgba($black, 0.15);
+  border-bottom: 1px solid rgba($black, 0.15);
+  border-radius: 4px;
+  padding: 0 8px;
+  margin: 8px 0 16px;
+  transition: border-color .5s ease-in-out;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+textarea:focus:not([readonly]){
+  border: 1px solid $black;
+  border-bottom: 1px solid $black;
+}
+
+textarea{
+  width: 103%;
+    resize: none;
+    min-height: 150px;
+    padding-top: 8px;
+
 }
