@@ -20,6 +20,10 @@ header {
   padding: 48px;
 }
 
+section {
+  padding-bottom: 64px;
+}
+
 nav {
   background-color: rgba(0,0,0,0);
   box-shadow: 0 0 0 0;
@@ -36,11 +40,19 @@ nav {
   ul a {
     animation: MoveLeft 1s ease-in;
     display: inline-flex;
-    transition: color 0.5s ease-out;
-    color: $black;
   }
 
   & ul a:hover {
+    background: none;
+    color: $red;
+  }
+}
+
+a, ul li a{
+  color: $black;
+  transition: color 0.5s ease-out;
+
+  &:hover {
     background: none;
     color: $red;
   }
@@ -86,7 +98,8 @@ nav {
     font-size: 2rem;
     animation-fill-mode: both;
     animation: MoveRight 1s ease-out;
-    &-hero{
+
+    &-hero {
       font-family: $cursive;
     }
   }
@@ -96,7 +109,7 @@ nav {
     font-family: $sfont;
   }
 
-  &__card{
+  &__card {
     font-size: 1.65rem;
     font-weight: 900;
   }
@@ -111,13 +124,14 @@ nav {
     -webkit-text-fill-color: transparent;
   }
 
-  &__price{
+  &__price {
     font-size: 1.5rem;
     font-weight: bold;
-    &-original{
+
+    &-original {
       font-size: 14px;
       font-style: italic;
-      opacity: .5;
+      opacity: 0.5;
       text-decoration: line-through;
     }
   }
@@ -131,23 +145,41 @@ nav {
   font-size: 1.5rem;
   padding: 16px 32px;
 
-&__primary{
-  background: $red;
-  font-size: 22px;
-  font-weight: 500;
-  box-shadow: $shadowbtn;
-  color: $white;
-  transition: all 0.3s;
-}
 
-&-card{
-  width: 100%;
-}
 
-  &__secondary {
+  &__primary,
+  &__primary:focus {
+    background: $red;
+    font-size: 22px;
+    font-weight: 500;
+    box-shadow: $shadowbtn;
+    color: $white;
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 0 7px 30px rgba(223, 45, 70, 0.75);
+      transform: translateY(-5px);
+    }
+    &:active {
+      transform: scale(0.9);
+      box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    }
+  }
+
+  &-card {
+    width: 100%;
+  }
+
+  &__secondary,
+  &__secondary:focus {
     color: $black;
     box-shadow: $shadowbtn;
     border: 1px solid $red;
+
+    &:hover {
+      background: $red;
+      color: $white;
+    }
   }
 }
 
@@ -161,26 +193,30 @@ nav {
 }
 
 .menu {
-  display: grid;
-  grid-template-columns: repeat(3,minmax(300px, 570px));
+  display: flex;
+  // grid-template-columns: repeat(3,1fr);
   place-items: center;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scroll-snap-type: x-proximity;
   gap: 32px;
   padding-bottom: 32px;
 
   &__card {
+    scroll-snap-align: center;
     $border: 16px;
     $ajust: 100px;
     box-shadow: $shadowbtn;
     border-radius: $border;
     padding: 32px;
-    position: relative;
     margin-top: $ajust;
+
     &-item {
       max-width: 95%;
       height: 200px;
+      position: relative;
       margin-left: auto;
       margin-right: auto;
-      position: absolute;
       width: 80%;
       transform: translateY(-$ajust);
 
@@ -203,38 +239,39 @@ nav {
       width: 100%;
     }
 
-    &-inner{
-      padding-top: $ajust;
+    &-inner {
+      margin-top: -$ajust;
     }
   }
 }
 
-.rating{
-    color: $bgcolor;
+.rating {
+  color: $bgcolor;
 }
 
-.delivery{
+.delivery {
   background: $bgcolor;
 }
 
-.contact{
-  &__grid{
+.contact {
+  &__grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 570px));
+    grid-template-columns: 2fr 1fr;
     place-items: center;
   }
-  &__button{
+
+  &__button {
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-.menu__card-services{
+.menu__card-services {
   position: relative;
 }
 
-.overlay{
+.overlay {
   position: absolute;
   display: grid;
   border-radius: 16px;
@@ -247,44 +284,134 @@ nav {
   background: rgba(6, 2, 29, 0.15);
   z-index: 2;
   text-align: center;
-  & p{
-    // opacity: 0;
 
+  & p {
+    // opacity: 0;
   }
-  &:hover p{
-    animation: welcometext .3s ease-in;
+
+  &:hover p {
+    animation: welcometext 0.3s ease-in;
   }
 }
 
-label{
+label {
   color: $black !important;
   font-size: 14px;
 }
 
 input:not([type]),
-input[type=text]:not(.browser-default),
 input[type=email]:not(.browser-default),
-textarea{
+input[type=text]:not(.browser-default),
+textarea {
   border: 1px solid rgba($black, 0.15);
   border-bottom: 1px solid rgba($black, 0.15);
   border-radius: 4px;
   padding: 0 8px;
   margin: 8px 0 16px;
-  transition: border-color .5s ease-in-out;
+  transition: border-color 0.5s ease-in-out;
 }
 
 input:not([type]):focus:not([readonly]),
-input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
-textarea:focus:not([readonly]){
+input[type=text]:not(.browser-default):focus:not([readonly]),
+textarea:focus:not([readonly]) {
   border: 1px solid $black;
   border-bottom: 1px solid $black;
 }
 
-textarea{
+textarea {
   width: 103%;
-    resize: none;
-    min-height: 150px;
-    padding-top: 8px;
+  resize: none;
+  min-height: 150px;
+  padding-top: 8px;
+}
 
+.footer {
+  &__container {
+    max-width: 80%;
+    margin: 32px auto 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+    & h6 {
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+
+  &-links {
+    & li a {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
+
+.about {
+  width: 40%;
+}
+
+.social-icons {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-grap: grap;
+}
+
+
+
+//Animations
+@keyframes MoveLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes MoveRight {
+  0%{
+    opacity: 0;
+    transform: translateX(400px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes MoveUp {
+  0%{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes button {
+  0%{
+    opacity: 1;
+    background: $bgcolor;
+    color: $black;
+  }
+  100%{
+    opacity: 1;
+    color: $white;
+    background: $red;
+
+  }
+}
+@keyframes shadow {
+  0%{
+    box-shadow: 0 0 0 0;
+  }
+  100%{
+    box-shadow: $shadowbtn;
+  }
 }
