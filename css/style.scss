@@ -48,7 +48,8 @@ nav {
   }
 }
 
-a, ul li a{
+a,
+ul li a {
   color: $black;
   transition: color 0.5s ease-out;
 
@@ -61,6 +62,8 @@ a, ul li a{
 .container {
   width: 95%;
   max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo {
@@ -119,7 +122,7 @@ a, ul li a{
     background: -moz-linear-gradient(90deg, rgba(233,33,32,1) 0%, rgba(233,66,32,1) 100%);
     background: -webkit-linear-gradient(90deg, rgba(233,33,32,1) 0%, rgba(233,66,32,1) 100%);
     background: linear-gradient(90deg, rgba(233,33,32,1) 0%, rgba(233,66,32,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=  "#e92120",endColorstr="#e94220",GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=  "#e92120",endColorstr="#e94220",GradientType=1))
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -145,8 +148,6 @@ a, ul li a{
   font-size: 1.5rem;
   padding: 16px 32px;
 
-
-
   &__primary,
   &__primary:focus {
     background: $red;
@@ -160,6 +161,7 @@ a, ul li a{
       box-shadow: 0 7px 30px rgba(223, 45, 70, 0.75);
       transform: translateY(-5px);
     }
+
     &:active {
       transform: scale(0.9);
       box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
@@ -193,17 +195,12 @@ a, ul li a{
 }
 
 .menu {
-  display: flex;
-  // grid-template-columns: repeat(3,1fr);
+  display: grid;
+  grid-template-columns: repeat(3,minmax(300px, 570px));
   place-items: center;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
-  scroll-snap-type: x-proximity;
   gap: 32px;
-  padding-bottom: 32px;
 
   &__card {
-    scroll-snap-align: center;
     $border: 16px;
     $ajust: 100px;
     box-shadow: $shadowbtn;
@@ -256,7 +253,7 @@ a, ul li a{
 .contact {
   &__grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: repeat(2, minmax(300px, 570px));
     place-items: center;
   }
 
@@ -354,64 +351,83 @@ textarea {
   width: 40%;
 }
 
-.social-icons {
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-  flex-grap: grap;
+.social {
+  &-icons {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-grap: grap;
+  }
+
+  &__item {
+    // display: inline-flex;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    // align-items: center;
+    // justify-content: center;
+    color: $white;
+    // background: #405de6;
+    // box-shadow: 0 7px 30px rgb(43 98 169 / 50%);
+    // position: relative;
+    font-size: 2rem;
+    // flex-shrink: 0;
+    transition: all 0.3s;
+  }
 }
-
-
-
 //Animations
 @keyframes MoveLeft {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(-100px);
   }
-  100%{
+
+  100% {
     opacity: 1;
     transform: translate(0);
   }
 }
 @keyframes MoveRight {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(400px);
   }
-  100%{
+
+  100% {
     opacity: 1;
     transform: translate(0);
   }
 }
 @keyframes MoveUp {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(100px);
   }
-  100%{
+
+  100% {
     opacity: 1;
     transform: translate(0);
   }
 }
 @keyframes button {
-  0%{
+  0% {
     opacity: 1;
     background: $bgcolor;
     color: $black;
   }
-  100%{
+
+  100% {
     opacity: 1;
     color: $white;
     background: $red;
-
   }
 }
 @keyframes shadow {
-  0%{
+  0% {
     box-shadow: 0 0 0 0;
   }
-  100%{
+
+  100% {
     box-shadow: $shadowbtn;
   }
 }
