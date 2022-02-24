@@ -9,8 +9,8 @@ $white: #f5f5f5;
 $red: #e92030;
 $shadowbtn: 0 30px 60px 0 rgba(90, 116, 148, 0.2);
 
-*{
-   scroll-behavior: smooth;
+* {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -52,10 +52,13 @@ nav {
   }
 }
 
-a,
+a{
+  color: $black;
+  transition: color 0.2s ease-in;
+}
 ul li a {
   color: $black;
-  transition: color 0.5s ease-out;
+  transition: color 0.2s ease-in;
 
   &:hover {
     background: none;
@@ -93,6 +96,10 @@ ul li a {
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+    & img {
+      animation: MoveUp 1s ease-in;
+    }
   }
 
   &__item {
@@ -104,8 +111,7 @@ ul li a {
   &__subtitle {
     font-size: 2rem;
     animation-fill-mode: both;
-    animation: MoveRight 1s ease-out;
-
+    // animation: MoveRight 1s ease-out;
     &-hero {
       font-family: $cursive;
     }
@@ -292,7 +298,7 @@ ul li a {
   }
 
   &:hover p {
-    animation: welcometext .3s ease-in-out;
+    animation: welcometext 0.3s ease-in-out;
     animation-fill-mode: both;
   }
 }
@@ -359,26 +365,44 @@ textarea {
 
 .social {
   &-icons {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-grap: grap;
+    gap: 8px;
   }
 
   &__item {
-    // display: inline-flex;
+    display: inline-flex;
     width: 45px;
+    background: $black;
     height: 45px;
     border-radius: 50%;
-    // align-items: center;
-    // justify-content: center;
+    align-items: center;
+    justify-content: center;
     color: $white;
+    padding: 5%;
     // background: #405de6;
     // box-shadow: 0 7px 30px rgb(43 98 169 / 50%);
     // position: relative;
-    font-size: 2rem;
+    font-size: 20px;
     // flex-shrink: 0;
     transition: all 0.3s;
+    &:hover{
+      transform: scale(1.2);
+    }
+    &-linkedin{
+      background: linear-gradient(45deg,#3b5998,#0078d7);
+    }
+    &-github{
+      background: linear-gradient(45deg,#333,#626b73);
+    }
+    &-behance{
+        background: #405de6;
+    }
+    &-twitter{
+      background: linear-gradient(45deg,#1da1f2,#0e71c8);
+    }
   }
 }
 //Animations
@@ -437,12 +461,12 @@ textarea {
     box-shadow: $shadowbtn;
   }
 }
-
 @keyframes welcometext {
-  0%{
+  0% {
     transform: translateY(400%);
   }
-  100%{
+
+  100% {
     transform: translateY(0);
   }
 }
