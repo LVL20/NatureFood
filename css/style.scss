@@ -9,6 +9,10 @@ $white: #f5f5f5;
 $red: #e92030;
 $shadowbtn: 0 30px 60px 0 rgba(90, 116, 148, 0.2);
 
+*{
+   scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: $pfont;
@@ -122,7 +126,7 @@ ul li a {
     background: -moz-linear-gradient(90deg, rgba(233,33,32,1) 0%, rgba(233,66,32,1) 100%);
     background: -webkit-linear-gradient(90deg, rgba(233,33,32,1) 0%, rgba(233,66,32,1) 100%);
     background: linear-gradient(90deg, rgba(233,33,32,1) 0%, rgba(233,66,32,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=  "#e92120",endColorstr="#e94220",GradientType=1))
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=  "#e92120",endColorstr="#e94220",GradientType=1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -278,16 +282,18 @@ ul li a {
   top: 0;
   right: 0;
   left: 0;
-  background: rgba(6, 2, 29, 0.15);
+  background: rgba(6, 2, 29, 0.25);
   z-index: 2;
+  color: $white;
   text-align: center;
 
   & p {
-    // opacity: 0;
+    transform: translateY(400%);
   }
 
   &:hover p {
-    animation: welcometext 0.3s ease-in;
+    animation: welcometext .3s ease-in-out;
+    animation-fill-mode: both;
   }
 }
 
@@ -429,5 +435,14 @@ textarea {
 
   100% {
     box-shadow: $shadowbtn;
+  }
+}
+
+@keyframes welcometext {
+  0%{
+    transform: translateY(400%);
+  }
+  100%{
+    transform: translateY(0);
   }
 }
